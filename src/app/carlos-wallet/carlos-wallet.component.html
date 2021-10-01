@@ -1,0 +1,9 @@
+<h2 class="text-center">Saldo em bitcoin: {{saldo}}</h2>
+<h2 class="text-center" *ngIf="saldoUsd">Saldo em USD: {{saldoUsd}}</h2>
+<h2 class="text-center" *ngIf="saldoUsd">Saldo em EURO: {{saldoEuro}}</h2>
+<form class="d-flex justify-content-center py-5">
+  <label for="valorSaldo">Valor em BRL:</label>
+  <input type="number" name="valorSaldo" id="valorSaldo" NgModel #f>
+  <button type="button" (click)="onAdd(+f.value)">Adicionar</button>
+  <button type="button" (click)="onRemove(+f.value)">Remover</button>
+</form>

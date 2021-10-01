@@ -1,0 +1,22 @@
+<div class="container mt-3">
+  <h2 class="text-center">Lista de cotações (em BRL)</h2>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Updated at</th>
+      <th>USD</th>
+      <th>Euro</th>
+      <th>Bitcoin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cotacao of walletService.listaDeCotacoes">
+      <td>{{cotacao.updatedAt}}</td>
+      <td>{{cotacao.USD}}</td>
+      <td>{{cotacao.EUR}}</td>
+      <td>{{cotacao.BTC}}</td>
+    </tr>
+  </tbody>
+</table>
